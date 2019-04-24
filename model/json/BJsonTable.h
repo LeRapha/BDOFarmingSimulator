@@ -16,10 +16,13 @@ private:
     QFile m_fDataFile;
     QJsonArray m_jsonTable;
 public:
-    BJsonTable(const QString sFileName, const QString sTableName);
+    BJsonTable(const QString& sFileName, const QString& sTableName);
     QJsonArray getTable();
     ~BJsonTable();
-
+    void initTableFromFile(const QString& sTableName);
+    void initFile(const QString&);
+    bool openFile(QIODevice::OpenModeFlag openMode);
+    bool closeFile();
 };
 
 #endif // BJSONDOCUMENT_H

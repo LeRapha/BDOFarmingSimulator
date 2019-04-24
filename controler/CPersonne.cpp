@@ -6,7 +6,7 @@ CPersonne::CPersonne()
 }
 
 QString CPersonne::GetInfosAllPersonne(){
-    QString sInfosAllPersonnes;
+    QString sInfosAllPersonnes = "";
     vector<BData*> vPersonnes = m_oPersonne->selectAll();
     for (BData* oPersonne : vPersonnes){
         sInfosAllPersonnes += oPersonne->getId() + dynamic_cast<BPersonne*>(oPersonne)->getNom() + "/n";

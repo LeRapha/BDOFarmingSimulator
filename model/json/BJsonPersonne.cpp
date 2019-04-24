@@ -1,7 +1,9 @@
 #include "BJsonPersonne.h"
 
 BJsonPersonne::BJsonPersonne(){
-    m_tPersonne = new BJsonTable(JSON_FILE_PERSONNE, JSON_TABLE_PERSONNE);
+    const QString sFileName = JSON_FILE_PERSONNE;
+    const QString sTableName = JSON_TABLE_PERSONNE;
+    m_tPersonne = new BJsonTable(sFileName, sTableName);
 }
 
 BJsonPersonne::BJsonPersonne(int iId)

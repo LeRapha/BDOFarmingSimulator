@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/tables">
+        <file alias="personne">BDD/Personne.json</file>
+    </qresource>
+</RCC>

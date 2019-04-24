@@ -4,7 +4,7 @@
 #include "BJsonTable.h"
 #include "../BPersonne.h"
 
-#define JSON_FILE_PERSONNE "personne.json"
+#define JSON_FILE_PERSONNE ":/tables/personne"
 #define JSON_TABLE_PERSONNE "personnes"
 
 class BJsonPersonne : public BPersonne
