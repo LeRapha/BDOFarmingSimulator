@@ -1,30 +1,23 @@
 #ifndef BDATA_H
 #define BDATA_H
 
-#include <QJsonDocument>
-#include <QFile>
+#include <vector>
 
 using namespace std;
 
-class BData : public QJsonDocument
+class BData
 {
-    QFile m_fDataFile;
+protected:
+    int m_iId;
 public:
-    BData(const QString sFileName){
-        m_fDataFile.setFileName(sFileName);
-        m_fDataFile.open(QIODevice::ReadWrite | QIODevice::Text);
-        this->fromJson(m_fDataFile.readAll());
-    }
-
-    virtual void select(int id) = 0;
-    virtual void update() = 0;
-    virtual void insert() = 0;
-    virtual void remove() = 0;
-
-    ~BData(){
-        m_fDataFile.close();
-    }
-
+    BData();
+    virtual void select()=0;
+    virtual std::vector<BData*> selectAll()=0;
+    virtual void update()=0;
+    virtual void insert()=0;
+    virtual void remove()=0;
+    int getId() const;
+    void setId(int iId);
 };
 
 #endif // BDATA_H

@@ -27,13 +27,19 @@ CONFIG += c++11
 SOURCES += \
         controler/CPersonne.cpp \
         main.cpp \
+        model/BData.cpp \
         model/BPersonne.cpp \
+        model/json/BJsonPersonne.cpp \
+        model/json/BJsonTable.cpp \
         windows/wmain.cpp
 
 HEADERS += \
     controler/CPersonne.h \
     model/BData.h \
     model/BPersonne.h \
+    model/FData.h \
+    model/json/BJsonPersonne.h \
+    model/json/BJsonTable.h \
     windows/wmain.h
 
 FORMS += \

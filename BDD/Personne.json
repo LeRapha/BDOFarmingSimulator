@@ -1,13 +1,16 @@
 {
-    "ID" : 0
-    "FirstName": "John",
-    "LastName": "Doe",
-    "Age": 43
-}
-
-{
-    "ID" : 1
-    "FirstName": "Raphaël",
-    "LastName": "Moriconi",
-    "Age": 27
+    "personnes" :[
+        {
+            "ID" : 0
+            "FirstName": "John",
+            "LastName": "Doe",
+            "Age": 43
+        },
+        {
+            "ID" : 1
+            "FirstName": "Raphaël",
+            "LastName": "Moriconi",
+            "Age": 27
+        }
+    ]
 }

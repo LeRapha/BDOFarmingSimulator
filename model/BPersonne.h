@@ -1,24 +1,25 @@
-#ifndef PERSONNE_H
-#define PERSONNE_H
+#ifndef BPERSONNE_H
+#define BPERSONNE_H
 
 #include "BData.h"
-
-#define FILE_PERSONNE "personne.json"
+#include <QString>
 
 class BPersonne : public BData
 {
-private :
-    string m_sNom;
-    string m_sPrenom;
+protected:
+    QString m_sNom;
+    QString m_sPrenom;
     int m_iAge;
-    int m_iId;
 public:
     BPersonne();
-    virtual void select(int id);
-    virtual void update();
-    virtual void insert();
-    virtual void remove();
-    virtual ~BPersonne();
+
+    //Getters and setters
+    QString getNom() const {return m_sNom;}
+    void setNom(const QString &sNom){m_sNom = sNom;}
+    QString getPrenom() const{return m_sPrenom;}
+    void setPrenom(const QString &sPrenom){m_sPrenom = sPrenom;}
+    int getAge() const{return m_iAge;}
+    void setAge(int iAge){m_iAge = iAge;}
 };
 
-#endif // PERSONNE_H
+#endif // BPERSONNE_H

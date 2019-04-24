@@ -14,6 +14,7 @@ class WMain : public QMainWindow
 public:
     explicit WMain(QWidget *parent = nullptr);
     ~WMain();
+    void afficherInfosPersonnes();
 
 private:
     Ui::WMain *ui;
