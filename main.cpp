@@ -1,4 +1,4 @@
-#include "wmain.h"
+#include "windows/wmain.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])

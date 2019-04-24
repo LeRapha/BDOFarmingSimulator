@@ -25,14 +25,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+        controler/CPersonne.cpp \
         main.cpp \
-        wmain.cpp
+        model/BPersonne.cpp \
+        windows/wmain.cpp
 
 HEADERS += \
-        wmain.h
+    controler/CPersonne.h \
+    model/BData.h \
+    model/BPersonne.h \
+    windows/wmain.h
 
 FORMS += \
-        wmain.ui
+    windows/wmain.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
