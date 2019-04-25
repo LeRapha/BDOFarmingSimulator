@@ -5,7 +5,11 @@
 #include "json/BJsonFruit.h"
 #include "json/BJsonProduit.h"
 
+
 #define DATA_JSON "JSON"
+#define DATA_MYSQL "MYSQL"
+
+#define TYPE_DATA DATA_JSON
 
 using namespace std;
 
@@ -22,25 +26,25 @@ public:
         return instance;
     }
 
-    BGraine* newGraine(const QString sTypeData){
+    BGraine* newGraine(){
         BGraine* oGraine = nullptr;
-        if(sTypeData == DATA_JSON){
+        if(QString(TYPE_DATA) == QString(DATA_JSON)){
             oGraine = new BJsonGraine();
         }
         return  oGraine;
     }
 
-    BProduit* newProduit(const QString sTypeData){
+    BProduit* newProduit(){
         BProduit* oProduit = nullptr;
-        if(sTypeData == DATA_JSON){
+        if(QString(TYPE_DATA) == QString(DATA_JSON)){
             oProduit = new BJsonProduit();
         }
         return  oProduit;
     }
 
-    BFruit* newFruit(const QString sTypeData){
+    BFruit* newFruit(){
         BFruit* oFruit = nullptr;
-        if(sTypeData == DATA_JSON){
+        if(QString(TYPE_DATA) == (DATA_JSON)){
             oFruit = new BJsonFruit();
         }
         return  oFruit;

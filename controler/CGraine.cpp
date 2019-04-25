@@ -2,7 +2,7 @@
 
 CGraine::CGraine()
 {
-    m_oGraine = FData::GetFabriqueData().newGraine(DATA_JSON);
+    m_oGraine = FData::GetFabriqueData().newGraine();
 }
 
 QString CGraine::GetInfosAllGraine(){
