@@ -19,13 +19,13 @@ void BJsonFruit::select(){
 }
 
 vector<BData*>& BJsonFruit::selectAll(){
-    vector<BData*>* vGraines = new vector<BData*>();
+    vector<BData*>* vFruits = new vector<BData*>();
     foreach (const QJsonValue & v, tFruits.getTable()){
-        BFruit* oGraine = new BJsonFruit(v.toObject().value(JSON_CHAMP_TABLE_ID).toInt());
-        oGraine->select();
-        vGraines->push_back(oGraine);
+        BFruit* oFruit = new BJsonFruit(v.toObject().value(JSON_CHAMP_TABLE_ID).toInt());
+        oFruit->select();
+        vFruits->push_back(oFruit);
     }
-    return *vGraines;
+    return *vFruits;
 }
 
 void BJsonFruit::update(){

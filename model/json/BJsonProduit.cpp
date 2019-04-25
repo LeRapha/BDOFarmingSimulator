@@ -21,13 +21,13 @@ void BJsonProduit::select(){
 }
 
 vector<BData*>& BJsonProduit::selectAll(){
-    vector<BData*>* vGraines = new vector<BData*>();
+    vector<BData*>* vProduits = new vector<BData*>();
     foreach (const QJsonValue & v, tProduits.getTable()){
-        BProduit* oGraine = new BJsonProduit(v.toObject().value(JSON_CHAMP_TABLE_ID).toInt());
-        oGraine->select();
-        vGraines->push_back(oGraine);
+        BProduit* oProduit = new BJsonProduit(v.toObject().value(JSON_CHAMP_TABLE_ID).toInt());
+        oProduit->select();
+        vProduits->push_back(oProduit);
     }
-    return *vGraines;
+    return *vProduits;
 }
 
 void BJsonProduit::update(){

@@ -72,7 +72,9 @@ void BJsonTable::readTableFromFile(const QString& sTableName){
 }
 
 void BJsonTable::commit(){
-    m_jsonDocument.toJson(QJsonDocument::JsonFormat::Indented);
+    this->openFile(QIODevice::WriteOnly);
+    m_fDataFile.write(m_jsonDocument.toJson(QJsonDocument::JsonFormat::Indented));
+    this->closeFile();
 }
 
 QJsonArray& BJsonTable::getTable(){

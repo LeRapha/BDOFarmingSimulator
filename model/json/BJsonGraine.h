@@ -12,7 +12,7 @@ class BJsonGraine : public BGraine
 public:
     //Constructors & destructor
     BJsonGraine();
-    BJsonGraine(int id);
+    BJsonGraine(int id, int iIdFruit, int iIdProduit);
     ~BJsonGraine();
 
     //Inherited methods

@@ -2,6 +2,8 @@
 #define FDATA_H
 
 #include "json/BJsonGraine.h"
+#include "json/BJsonFruit.h"
+#include "json/BJsonProduit.h"
 
 #define DATA_JSON "JSON"
 
@@ -26,6 +28,22 @@ public:
             oGraine = new BJsonGraine();
         }
         return  oGraine;
+    }
+
+    BProduit* newProduit(const QString sTypeData){
+        BProduit* oProduit = nullptr;
+        if(sTypeData == DATA_JSON){
+            oProduit = new BJsonProduit();
+        }
+        return  oProduit;
+    }
+
+    BFruit* newFruit(const QString sTypeData){
+        BFruit* oFruit = nullptr;
+        if(sTypeData == DATA_JSON){
+            oFruit = new BJsonFruit();
+        }
+        return  oFruit;
     }
 };
 

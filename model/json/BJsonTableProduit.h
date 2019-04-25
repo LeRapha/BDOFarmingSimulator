@@ -5,7 +5,7 @@
 
 
 #define JSON_FILE_PRODUIT ":/tables/Produit"
-#define JSON_TABLE_PRODUIT "Fruits"
+#define JSON_TABLE_PRODUIT "Produits"
 
 #define JSON_CHAMP_PRODUIT_NOM "Nom"
 
