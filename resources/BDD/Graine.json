@@ -1,0 +1,56 @@
+{
+    "Graines" :[
+        {
+            "ID" : 0,
+            "Nom": "Blé magique",
+            "IDFruit": 0,
+            "IDProduit": 0,
+            "BonusTemperature" : [
+                {
+                    "IntervalleMin" : 0,
+                    "IntervalleMax" : 22,
+                    "Bonus" : 1.20
+                },
+                {
+                    "IntervalleMin" : 22,
+                    "IntervalleMax" : 70,
+                    "Bonus" : 1.80
+                },
+                {
+                    "IntervalleMin" : 70,
+                    "IntervalleMax" : 100,
+                    "Bonus" : 1.56
+                }
+            ],
+            "BonusHumidite" : [
+                {
+                    "IntervalleMin" : 0,
+                    "IntervalleMax" : 45,
+                    "Bonus" : -1.20
+                },
+                {
+                    "IntervalleMin" : 45,
+                    "IntervalleMax" : 100,
+                    "Bonus" : -7.00
+                }
+            ],
+            "BonusNappe" : [
+                {
+                    "IntervalleMin" : 0,
+                    "IntervalleMax" : 25,
+                    "Bonus" : -0.73
+                },
+                {
+                    "IntervalleMin" : 25,
+                    "IntervalleMax" : 60,
+                    "Bonus" : 0.00
+                },
+                {
+                    "IntervalleMin" : 60,
+                    "IntervalleMax" : 100,
+                    "Bonus" : 0.32
+                }
+            ]
+        }
+    ]
+}

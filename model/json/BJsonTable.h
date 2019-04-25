@@ -9,6 +9,8 @@
 
 using namespace std;
 
+#define JSON_CHAMP_TABLE_ID "ID"
+
 class BJsonTable
 {
 private:
@@ -17,12 +19,13 @@ private:
     QJsonArray m_jsonTable;
 public:
     BJsonTable(const QString& sFileName, const QString& sTableName);
-    QJsonArray getTable();
+    QJsonArray& getTable();
     ~BJsonTable();
-    void initTableFromFile(const QString& sTableName);
+    void readTableFromFile(const QString& sTableName);
     void initFile(const QString&);
     bool openFile(QIODevice::OpenModeFlag openMode);
     bool closeFile();
+    void commit();
 };
 
 #endif // BJSONDOCUMENT_H

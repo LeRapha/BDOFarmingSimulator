@@ -25,21 +25,32 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
-        controler/CPersonne.cpp \
+        controler/CGraine.cpp \
         main.cpp \
         model/BData.cpp \
-        model/BPersonne.cpp \
-        model/json/BJsonPersonne.cpp \
+        model/BFruit.cpp \
+        model/BGraine.cpp \
+        model/BProduit.cpp \
+        model/json/BJsonFruit.cpp \
+        model/json/BJsonGraine.cpp \
+        model/json/BJsonProduit.cpp \
         model/json/BJsonTable.cpp \
         windows/wmain.cpp
 
 HEADERS += \
-    controler/CPersonne.h \
+    controler/CGraine.h \
     model/BData.h \
-    model/BPersonne.h \
+    model/BFruit.h \
+    model/BGraine.h \
+    model/BProduit.h \
     model/FData.h \
-    model/json/BJsonPersonne.h \
+    model/json/BJsonFruit.h \
+    model/json/BJsonGraine.h \
+    model/json/BJsonProduit.h \
     model/json/BJsonTable.h \
+    model/json/BJsonTableFruit.h \
+    model/json/BJsonTableGraine.h \
+    model/json/BJsonTableProduit.h \
     windows/wmain.h
 
 FORMS += \

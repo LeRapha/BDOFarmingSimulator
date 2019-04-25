@@ -12,7 +12,7 @@ protected:
 public:
     BData();
     virtual void select()=0;
-    virtual std::vector<BData*> selectAll()=0;
+    virtual std::vector<BData*>& selectAll() = 0;
     virtual void update()=0;
     virtual void insert()=0;
     virtual void remove()=0;

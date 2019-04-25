@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/tables">
-        <file alias="personne">BDD/Personne.json</file>
+        <file alias="Graine">BDD/Graine.json</file>
+        <file alias="Fruit">BDD/Fruit.json</file>
+        <file alias="Produit">BDD/Produit.json</file>
     </qresource>
 </RCC>

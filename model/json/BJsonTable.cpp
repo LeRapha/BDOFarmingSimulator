@@ -4,7 +4,7 @@
 BJsonTable::BJsonTable(const QString& sFileName,const QString& sTableName){
     initFile(sFileName);
     if(openFile(QIODevice::ReadOnly)){
-        initTableFromFile(sTableName);
+        readTableFromFile(sTableName);
         closeFile();
     }
 }
@@ -50,21 +50,31 @@ bool BJsonTable::closeFile(){
     return true;
 }
 
-void BJsonTable::initTableFromFile(const QString& sTableName){
+void BJsonTable::readTableFromFile(const QString& sTableName){
     QString jsonContent = m_fDataFile.readAll();
-    m_jsonDocument = QJsonDocument::fromJson(jsonContent.toUtf8());
-    if(m_jsonDocument.isObject()){
-        QJsonObject object = m_jsonDocument.object();
-        m_jsonTable = object.value(sTableName).toArray();
-    }else if (m_jsonDocument.isArray()) {
-        QJsonArray array = m_jsonDocument.array();
-        m_jsonTable = array;
+    QJsonParseError errJson;
+    m_jsonDocument = QJsonDocument::fromJson(jsonContent.toUtf8(), &errJson);
+    if(errJson.error == QJsonParseError::NoError){
+        if(m_jsonDocument.isObject()){
+            QJsonObject object = m_jsonDocument.object();
+            m_jsonTable = object.value(sTableName).toArray();
+        }else if (m_jsonDocument.isArray()) {
+            QJsonArray array = m_jsonDocument.array();
+            m_jsonTable = array;
+        }
+        else{
+            cerr << "Formattage JSON incorrect. " << endl;
+        }
     }
     else{
-        cerr << "Formattage JSON incorrect. " << endl;
+        cerr << "Erreur dans le parsing du fichier '" << m_fDataFile.fileName().toStdString() << "' : " << errJson.errorString().toStdString() << endl;
     }
 }
 
-QJsonArray BJsonTable::getTable(){
+void BJsonTable::commit(){
+    m_jsonDocument.toJson(QJsonDocument::JsonFormat::Indented);
+}
+
+QJsonArray& BJsonTable::getTable(){
     return m_jsonTable;
 }

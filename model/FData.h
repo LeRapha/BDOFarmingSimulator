@@ -1,7 +1,7 @@
 #ifndef FDATA_H
 #define FDATA_H
 
-#include "json/BJsonPersonne.h"
+#include "json/BJsonGraine.h"
 
 #define DATA_JSON "JSON"
 
@@ -20,12 +20,12 @@ public:
         return instance;
     }
 
-    BPersonne* newPersonne(const QString sTypeData){
-        BPersonne* oPersonne = nullptr;
+    BGraine* newGraine(const QString sTypeData){
+        BGraine* oGraine = nullptr;
         if(sTypeData == DATA_JSON){
-            oPersonne = new BJsonPersonne();
+            oGraine = new BJsonGraine();
         }
-        return  oPersonne;
+        return  oGraine;
     }
 };
 
