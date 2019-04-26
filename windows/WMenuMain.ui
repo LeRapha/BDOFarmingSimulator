@@ -1,22 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>WMain</class>
- <widget class="QMainWindow" name="WMain">
+ <class>WMenuMain</class>
+ <widget class="QMainWindow" name="WMenuMain">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>460</width>
-    <height>438</height>
+    <width>174</width>
+    <height>100</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>BDO Farming Simulator</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QPlainTextEdit" name="edt_infos"/>
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0">
+     <widget class="QPushButton" name="pb_data">
+      <property name="text">
+       <string>Données</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QPushButton" name="pb_fermes">
+      <property name="text">
+       <string>Fermes</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -25,7 +36,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>460</width>
+     <width>174</width>
      <height>21</height>
     </rect>
    </property>

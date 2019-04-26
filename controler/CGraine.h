@@ -4,6 +4,8 @@
 #include "../model/BGraine.h"
 #include "../model/FData.h"
 
+#include <QStandardItemModel>
+
 class CGraine
 {
 private:
@@ -11,6 +13,7 @@ private:
 public:
     CGraine();
     QString GetInfosAllGraine();
+    QStandardItemModel& GetModelAllGraine();
 };
 
 #endif // CGraine_H

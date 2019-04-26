@@ -35,7 +35,9 @@ SOURCES += \
         model/json/BJsonGraine.cpp \
         model/json/BJsonProduit.cpp \
         model/json/BJsonTable.cpp \
-        windows/wmain.cpp
+        windows/WListeGraines.cpp \
+        windows/WMenuGestionDonnees.cpp \
+        windows/WMenuMain.cpp
 
 HEADERS += \
     controler/CGraine.h \
@@ -51,10 +53,14 @@ HEADERS += \
     model/json/BJsonTableFruit.h \
     model/json/BJsonTableGraine.h \
     model/json/BJsonTableProduit.h \
-    windows/wmain.h
+    windows/WListeGraines.h \
+    windows/WMenuGestionDonnees.h \
+    windows/WMenuMain.h
 
 FORMS += \
-    windows/wmain.ui
+    windows/WListeGraines.ui \
+    windows/WMenuGestionDonnees.ui \
+    windows/WMenuMain.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -64,4 +70,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 DISTFILES +=
 
 RESOURCES += \
-    resources/tables.qrc
+    resources/resources.qrc
